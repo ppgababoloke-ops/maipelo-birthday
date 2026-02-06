@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0e1820;
+    --card:#141f28;
+    --accent:#e6c79c;
+    --soft:#9fb3c8;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:white;
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    padding:80px 20px 60px;
+    text-align:center;
+}
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:2.3rem;
+    margin:0;
+}
+header p{
+    margin-top:10px;
+    color:var(--accent);
+    font-size:1rem;
+}
+
+/* Content wrapper */
+.wrapper{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+/* Text sections */
+.section{
+    margin:60px 0;
+}
+.section h2{
+    font-family:'Playfair Display', serif;
+    font-size:1.6rem;
+    margin-bottom:20px;
+}
+.section p{
+    color:#e2e8ef;
+    margin-bottom:16px;
+}
+
+/* Flipbook */
+.flip{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.flip img{
+    width:100%;
+    max-width:720px;
+    border-radius:14px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.6);
+    opacity:0;
+    transform:scale(0.96);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+}
+.flip img.show{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* Letter */
+.letter{
+    font-family:'Patrick Hand', cursive;
+    font-size:1.2rem;
+    color:#f4f7fb;
+    margin-top:40px;
+}
+
+/* Ending */
+.ending{
+    text-align:center;
+    margin:100px auto 60px;
+    max-width:700px;
+    font-family:'Playfair Display', serif;
+    font-size:1.9rem;
+    color:var(--accent);
+}
+
+/* Buttons */
+.controls{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:60px 0 80px;
+}
+button{
+    background:none;
+    border:1px solid rgba(255,255,255,0.25);
+    color:white;
+    padding:10px 18px;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:0.9rem;
+}
+button:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+}
+.music{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    background:var(--card);
+    border:1px solid rgba(255,255,255,0.15);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>7 February 2000</h1>
+    <p>The day the world became a little kinder</p>
+</header>
+
+<div class="wrapper">
+
+    <div class="section">
+        <h2>My love</h2>
+        <p>
+            You find comfort in novels, care deeply for animals,
+            and hold your family close in a way that feels rare.
+        </p>
+        <p>
+            You read to escape, sleep to recharge,
+            and cook or bake when you want to show love quietly.
+        </p>
+        <p>
+            These are not small things.
+            They are the details that make you who you are.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>The first time I saw you</h2>
+        <p>
+            I thought you were the most beautiful girl I had ever seen.
+            Not dramatically — but in the way that makes your thoughts stop.
+        </p>
+        <p>
+            I remember my confidence disappearing,
+            knowing that nothing I said could measure up to how I felt.
+        </p>
+    </div>
+
+</div>
+
+<!-- Flipbook photos -->
+<div class="flip"><img src="photo1.jpg"></div>
+<div class="flip"><img src="photo2.jpg"></div>
+<div class="flip"><img src="photo3.jpg"></div>
+<div class="flip"><img src="photo4.jpg"></div>
+<div class="flip"><img src="photo5.jpg"></div>
+<div class="flip"><img src="photo6.jpg"></div>
+<div class="flip"><img src="photo7.jpg"></div>
+<div class="flip"><img src="photo8.jpg"></div>
+<div class="flip"><img src="photo9.jpg"></div>
+<div class="flip"><img src="photo10.jpg"></div>
+<div class="flip"><img src="photo11.jpg"></div>
+<div class="flip"><img src="photo12.jpg"></div>
+<div class="flip"><img src="photo13.jpg"></div>
+<div class="flip"><img src="photo14.jpg"></div>
+<div class="flip"><img src="photo15.jpg"></div>
+
+<div class="wrapper">
+
+    <div class="section letter">
+        <h2>A note for you</h2>
+        <p>
+            Today isn’t about doing something big.
+            It’s about recognising the person you are
+            and the calm, steady light you bring into my life.
+        </p>
+        <p>
+            <!-- WRITE YOUR PERSONAL MESSAGE HERE -->
+        </p>
+    </div>
+
+    <div class="controls">
+        <button onclick="window.print()">Download memories</button>
+    </div>
+
+    <div class="ending">
+        My life has been a better place because you are in it
+    </div>
+
+</div>
+
+<audio id="music" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" onclick="playMusic()">Play music</button>
+
+<script>
+function playMusic(){
+    const m=document.getElementById('music');
+    m.volume=0.4;
+    m.play();
+}
+
+const photos=document.querySelectorAll('.flip img');
+const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting){
+            e.target.classList.add('show');
+        }
+    });
+},{threshold:0.6});
+photos.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>
