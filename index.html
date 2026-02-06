@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💛</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg1:#0f2027;
+    --bg2:#203a43;
+    --bg3:#2c5364;
+    --accent:#ffd6e8;
+    --gold:#ffdf9e;
+}
+*{ box-sizing:border-box; }
+
+body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background:
+      radial-gradient(circle at top, rgba(255,214,232,0.25), transparent 55%),
+      linear-gradient(180deg,var(--bg1),var(--bg2),var(--bg3));
+    color:white;
+    overflow-x:hidden;
+}
+
+/* header */
+header{
+    padding:90px 20px 70px;
+    text-align:center;
+}
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:2.7rem;
+    margin:0;
+}
+header p{
+    margin-top:14px;
+    font-size:1.1rem;
+    color:var(--gold);
+}
+
+/* sections */
+.section{
+    max-width:900px;
+    margin:80px auto;
+    padding:0 24px;
+}
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.35);
+}
+.section h2{
+    font-family:'Playfair Display', serif;
+    font-size:1.8rem;
+    margin-bottom:20px;
+}
+.section p{
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.highlight{ color:var(--accent); }
+
+/* flipbook */
+.flip{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.flip img{
+    max-width:88%;
+    max-height:80vh;
+    border-radius:26px;
+    box-shadow:0 40px 100px rgba(0,0,0,0.55);
+    opacity:0;
+    transform: scale(0.9) translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.flip video{
+    max-width:88%;
+    max-height:75vh;
+    border-radius:26px;
+    box-shadow:0 40px 100px rgba(0,0,0,0.55);
+    opacity:0;
+    transform: scale(0.88) translateY(24px);
+    transition: opacity 1.6s ease, transform 1.6s ease;
+}
+.flip img.show, .flip video.show{
+    opacity:1;
+    transform: scale(1) translateY(0);
+}
+
+/* video caption */
+.video-caption{
+    font-family:'Playfair Display', serif;
+    font-size:1.2rem;
+    color:var(--gold);
+    margin-bottom:22px;
+    opacity:0.85;
+}
+
+/* letter */
+.letter{
+    font-family:'Patrick Hand', cursive;
+    font-size:1.25rem;
+}
+
+/* ending */
+.end-message{
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    font-size:2rem;
+    color:var(--gold);
+    margin:120px auto 60px;
+}
+
+/* buttons */
+.music-btn, .download-btn{
+    background:linear-gradient(135deg,var(--accent),var(--gold));
+    border:none;
+    color:#2b1b1b;
+    padding:14px 24px;
+    border-radius:999px;
+    cursor:pointer;
+}
+.music-btn{
+    position:fixed;
+    bottom:28px;
+    right:28px;
+}
+.download-btn{ margin-top:30px; }
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>7 February 2000 ✨</h1>
+<p>The day the world quietly became brighter</p>
+</header>
+
+<div class="section">
+<div id="daysAlive" class="card"></div>
+</div>
+
+<div class="section">
+<div class="card">
+<h2>My love, as I see her 🤍</h2>
+<p>
+What I admire most about her is her <span class="highlight">faith</span>.
+Her love for God shapes the way she loves and lives.
+</p>
+</div>
+</div>
+
+<div class="section">
+<div class="card">
+<h2>The first time I saw my love</h2>
+<p>
+I thought she was the most beautiful girl I had ever laid eyes on.
+</p>
+</div>
+</div>
+
+<div class="flip"><img src="photo1.jpg"></div>
+<div class="flip"><img src="photo2.jpg"></div>
+<div class="flip"><img src="photo3.jpg"></div>
+<div class="flip"><img src="photo4.jpg"></div>
+<div class="flip"><img src="photo5.jpg"></div>
+
+<div class="flip">
+<div class="video-caption">🎥 a moving memory</div>
+<video src="video1.mp4" muted controls playsinline></video>
+</div>
+
+<div class="flip"><img src="photo6.jpg"></div>
+<div class="flip"><img src="photo7.jpg"></div>
+<div class="flip"><img src="photo8.jpg"></div>
+<div class="flip"><img src="photo9.jpg"></div>
+<div class="flip"><img src="photo10.jpg"></div>
+<div class="flip"><img src="photo11.jpg"></div>
+<div class="flip"><img src="photo12.jpg"></div>
+<div class="flip"><img src="photo13.jpg"></div>
+<div class="flip"><img src="photo14.jpg"></div>
+<div class="flip"><img src="photo15.jpg"></div>
+<div class="flip"><img src="photo16.jpg"></div>
+<div class="flip"><img src="photo17.jpg"></div>
+<div class="flip"><img src="photo18.jpg"></div>
+<div class="flip"><img src="photo19.jpg"></div>
+<div class="flip"><img src="photo20.jpg"></div>
+<div class="flip"><img src="photo21.jpg"></div>
+
+<div class="section">
+<div class="card letter">
+<h2>A note for you 🎂</h2>
+<p><!-- YOUR MESSAGE --></p>
+<button class="download-btn" onclick="window.print()">⬇️ Download memories</button>
+</div>
+</div>
+
+<div class="end-message">
+My life has been a better place because you are in it 🤍
+</div>
+
+<audio id="music" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" onclick="playMusic()">🎵 Play music</button>
+
+<script>
+const birthDate=new Date("2000-02-07");
+const today=new Date();
+document.getElementById("daysAlive").innerText =
+`The world has been better for ${Math.floor((today-birthDate)/(1000*60*60*24))} days because you were born 💫`;
+
+function playMusic(){
+    const m=document.getElementById("music");
+    m.volume=0.45;
+    m.play();
+}
+
+const media=document.querySelectorAll(".flip img, .flip video");
+const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting){
+            e.target.classList.add("show");
+        }
+    });
+},{threshold:0.6});
+media.forEach(m=>observer.observe(m));
+</script>
+
+</body>
+</html>
